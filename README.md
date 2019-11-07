@@ -188,9 +188,8 @@ Default region name [None]: us-east-1 (or your region of choice)
 Default output format [None]: json  
 ```
 ### Create S3 bucket on AWS if one doesn't already exist  
-- Use AWS credentials and GUI to do this  
-  - For this exercise, bucketname is ib-rhte.redhat.com  
-- Make bucket public  
+- Use AWS GUI or CLI to do this
+- For this exercise, bucketname is ib-rhte.redhat.com  
 ### Upload image, using the UUID based image name determined in a previous step: 
 ```
 $ AMI=7008b4e6-59cb-405b-a8da-97a833f8b553-disk.ami  

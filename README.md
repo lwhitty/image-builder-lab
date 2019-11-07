@@ -70,7 +70,7 @@ $ sudo su
 # source /etc/bash_completion.d/composer-cli  
 ```
 ## Create system images with Image Builder command-line interface:  
-**NOTE:** To run the composer-cli command, user must be in the weldr or root groups  
+**NOTE:** To run the composer-cli command, user must either be root or be in the weldr or root groups  
 ### Create a plain text file named aws-ami-blueprint.toml with the following contents:  
 ```
 name = "AWS-AMI-Blueprint"  

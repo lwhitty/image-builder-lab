@@ -151,22 +151,22 @@ password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yx
 ```
 # composer-cli compose start AWS-AMI-Blueprint ami 
 ``` 
-### To monitor the status of the compose and to get the UUID:  
+### To monitor the status of the compose and to get the image UUID:  
 ```
 # watch composer-cli compose status 
 ``` 
 ### To download the finished image file once compose status is FINISHED:  
 ```
-# composer-cli compose image UUID #(replace UUID with UUID value from previous step)  
+# composer-cli compose image IMAGE_UUID #(replace IMAGE_UUID with IMAGE_UUID value from previous step)  
 ```
 **Note:** Alternatively, you can access the image file directly under the path /var/lib/lorax/composer/results/UUID/  
 ### Optional: To download logs:  
 ```
-# composer-cli compose logs UUID 
+# composer-cli compose logs IMAGE_UUID 
 ``` 
 ### Optional: To download metadata:  
 ```
-# composer-cli compose metadata UUID  
+# composer-cli compose metadata IMAGE_UUID  
 ```
 ## Transfer AMI to AWS:  
 ### Install Python 3 and the pip tool# yum install python3:  
@@ -190,9 +190,9 @@ Default output format [None]: json
 ### Create S3 bucket on AWS if one doesn't already exist  
 - Use AWS GUI or CLI to do this
 - For this exercise, bucketname is ib-rhte.redhat.com  
-### Upload image, using the UUID based image name determined in a previous step: 
+### Upload image, using the image UUID determined in previous steps: 
 ```
-$ AMI=7008b4e6-59cb-405b-a8da-97a833f8b553-disk.ami  
+$ AMI=<IMAGE_UUID_FROM_ABOVE> 
 $ BUCKET=ib-rhte.redhat.com  
 $ aws s3 cp $AMI s3://$BUCKET  
 ```

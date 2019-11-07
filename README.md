@@ -186,7 +186,7 @@ AWS Secret Access Key [None]: <Secret Access Key>
 Default region name [None]: us-east-1 (or your region of choice)
 Default output format [None]: json  
 ```
-### Create S3 bucket if one doesn't already exist  
+### Create S3 bucket on AWS if one doesn't already exist  
 - Use AWS credentials and GUI to do this  
   - For this exercise, bucketname is ib-rhte.redhat.com  
 - Make bucket public  

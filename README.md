@@ -179,7 +179,7 @@ password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yx
 $ pip3 install awscli  
 ```
 ### Configure the AWS command-line client according to your AWS access details:
-**Note:** Access key owner must have AmazonS3FullAccess and VMImportExportRoleForAWSConnector IAM policies attached  
+**Note:** Access key owner must have **AmazonS3FullAccess** and **VMImportExportRoleForAWSConnector** IAM policies attached
 ```
 $ aws configure  
 AWS Access Key ID [None]: <Access Key ID>  

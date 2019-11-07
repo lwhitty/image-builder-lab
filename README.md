@@ -173,9 +173,10 @@ password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yx
 ```
 # yum install python3 python3-pip
 ```  
-### Install the AWS command-line tools with pip:  
+### As non-root user, install the AWS command-line tools with pip:  
 ```
-# pip3 install awscli  
+# exit
+$ pip3 install awscli  
 ```
 ### Configure the AWS command-line client according to your AWS access details:  
 ```

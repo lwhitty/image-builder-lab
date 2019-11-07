@@ -201,7 +201,8 @@ $ printf '{ "Description": "RHTE-IB-image", "Format": "raw", "UserBucket": { "S3
 $ aws ec2 import-snapshot --disk-container file://containers.json 
 ```
 **Note:** If import fails with:
-*"An error occurred (InvalidParameter) when calling the ImportSnapshot operation: The service role vmimport does not exist or does not have sufficient permissions for the service to continue"*, follow these instructions for creating and attaching a vmimport role on AWS: https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#vmimport-role
+*"An error occurred (InvalidParameter) when calling the ImportSnapshot operation: The service role vmimport does not exist or does not have sufficient permissions for the service to continue"*, follow these instructions for creating and attaching a vmimport role on AWS:
+https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#vmimport-role
   
 After the policy is created you can run the import command.
 

@@ -57,10 +57,9 @@ $ sudo yum install lorax-composer composer-cli cockpit-composer bash-completion
 ``` 
 ### Enable Image Builder and cockpit to start after each reboot:  
 ```
-$ sudo systemctl enable cockpit.socket  
-$ sudo systemctl enable lorax-composer.socket
+$ sudo systemctl enable cockpit.socket && sudo systemctl start cockpit.socket
+$ sudo systemctl enable lorax-composer.socket && sudo systemctl start lorax-composer.socket
 ``` 
-**NOTE:** The lorax-composer and cockpit services start automatically on first access
 ### Configure the system firewall to allow access to the web console:  
 ```
 $ sudo firewall-cmd --add-service=cockpit && sudo firewall-cmd --add-service=cockpit --permanent  

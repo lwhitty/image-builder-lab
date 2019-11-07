@@ -151,9 +151,9 @@ password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yx
 ```
 # composer-cli compose start AWS-AMI-Blueprint ami 
 ``` 
-### To check the status of the compose and to get the UUID:  
+### To monitor the status of the compose and to get the UUID:  
 ```
-# composer-cli compose status 
+# watch composer-cli compose status 
 ``` 
 ### To download the finished image file once compose status is COMPLETE:  
 ```

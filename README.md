@@ -155,7 +155,7 @@ password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yx
 ```
 # watch composer-cli compose status 
 ``` 
-### To download the finished image file once compose status is COMPLETE:  
+### To download the finished image file once compose status is FINISHED:  
 ```
 # composer-cli compose image UUID #(replace UUID with UUID value from previous step)  
 ```

@@ -189,11 +189,10 @@ Default output format [None]: json
 ```
 ### Create S3 bucket on AWS if one doesn't already exist  
 - Use AWS GUI or CLI to do this
-- For this exercise, bucketname is ib-rhte.redhat.com  
 ### Upload image, using the image UUID determined in previous steps: 
 ```
 $ AMI=<IMAGE_UUID_FROM_ABOVE> 
-$ BUCKET=ib-rhte.redhat.com  
+$ BUCKET=<BUCKET_NAME_CREATED_ABOVE> 
 $ aws s3 cp $AMI s3://$BUCKET  
 ```
 ### Import the image as a snapshot into EC2:  
@@ -214,7 +213,7 @@ $ aws ec2 describe-import-snapshot-tasks --filters Name=task-state,Values=active
 - Click "Launch"  
 - Select either "Create a key pair" or "Use existing key pair, click the acknowledge box, then select "Launch Instances"  
 - Use your private key via SSH to access the resulting EC2 instance  
-### Switch to user "student" to verify that your custom users were created in the image build
+### Switch to user "student" to verify that your custom user was created in the image build
 ```
 $ su student
 password:

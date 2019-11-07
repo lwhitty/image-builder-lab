@@ -201,8 +201,33 @@ $ aws s3 cp $AMI s3://$BUCKET
 $ printf '{ "Description": "RHTE-IB-image", "Format": "raw", "UserBucket": { "S3Bucket": "%s", "S3Key": "%s" } }' $BUCKET $AMI > containers.json  
 $ aws ec2 import-snapshot --disk-container file://containers.json 
 ```
-**Note:** If the above step fails with an error that the service role <vmimport> does not exist, this role must be created on AWS:  
-- https://bee42.com/de/blog/tutorials/linuxkit-with-initial-aws-support/ (Follow directions in step 4 - Importing IAM permissions)  
+**Note:** If you get the following error, you need to create a vmimport policy on AWS:
+```
+An error occurred (InvalidParameter) when calling the ImportSnapshot operation:
+The sevice role <vmimport> does not exist or does not have sufficient permissions for the service to continue
+```
+### To create a vmimport policy on AWS (only needed if you get the above error):
+```
+cat > trust-policy.json <<FILE
+{
+   "Version": "2012-10-17",
+   "Statement": [
+      {
+         "Effect": "Allow",
+         "Principal": { "Service": "vmie.amazonaws.com" },
+         "Action": "sts:AssumeRole",
+         "Condition": {
+            "StringEquals":{
+               "sts:Externalid": "vmimport"
+            }
+         }
+      }
+   ]
+}
+FILE
+```
+After the policy is created you can run the import command.
+
 ### To track progress of the import:  
 ```
 $ aws ec2 describe-import-snapshot-tasks --filters Name=task-state,Values=active  

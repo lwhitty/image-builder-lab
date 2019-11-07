@@ -73,17 +73,17 @@ $ sudo su
 **NOTE:** To run the composer-cli command, user must be in the weldr or root groups  
 ### Create a plain text file named aws-ami-blueprint.toml with the following contents:  
 ```
-"name = "AWS-AMI-Blueprint"  
+name = "AWS-AMI-Blueprint"  
 description = "This is a blueprint for an AWS AMI"  
 version = "0.0.1"  
 modules = []  
-groups = []"  
+groups = [] 
 ```
 ### For every package that you want to be included in the blueprint, add the following lines to the file:  
 ```
-"[[packages]]  
+[[packages]]  
 name = "package-name"  
-version = "package-version""  
+version = "package-version" 
 ```
 **NOTES:**  
 - For a specific version, use the exact version number such as 8.30  
@@ -93,7 +93,7 @@ version = "package-version""
 
 ### To create a root and user account:  
 ```
-"[[customizations.user]]  
+[[customizations.user]]  
 name = "root"  
 password = "$6$DvY8c//GvFTqRSJI$VK5dtx9iMvE4grYPX5.jTEsLbvkpV.kzPwHDQYkIkiZRgmO6VSjZ.RYKDg2VmbGR2tIkCCdkNQQ0gocgoW0CS/"  
   
@@ -103,7 +103,7 @@ password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yx
 ```
 ### Here's an example of a completed aws-ami-blueprint.toml file:  
 ```
-"name = "AWS-AMI-Blueprint"  
+name = "AWS-AMI-Blueprint"  
 description = "This is a blueprint for an AWS AMI"  
 version = "0.0.1"  
 modules = []  
@@ -127,7 +127,7 @@ password = "$6$DvY8c//GvFTqRSJI$VK5dtx9iMvE4grYPX5.jTEsLbvkpV.kzPwHDQYkIkiZRgmO6
   
 [[customizations.user]]  
 name = "student"  
-password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yxDLgj3veB0RdgIiKEnVV9qk71m15tEX1tjSfLR1""  
+password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yxDLgj3veB0RdgIiKEnVV9qk71m15tEX1tjSfLR1"
 ```
 ### Push the blueprint:  
 ```

@@ -222,4 +222,8 @@ $ aws ec2 describe-import-snapshot-tasks --filters Name=task-state,Values=active
 $ su student
 password:
 ```   
+### Run tmux command to verify that Image Builder installed additional packages:
+```
+$ tmux
+```   
 > Written with [StackEdit](https://stackedit.io/).

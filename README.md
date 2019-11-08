@@ -205,7 +205,7 @@ $ aws ec2 import-snapshot --disk-container file://containers.json
 
 https://docs.aws.amazon.com/vm-import/latest/userguide/vmie_prereqs.html#vmimport-role
   
-After the policy is created you can run the import command.
+After the policy is created you can run the import command
 
 ### To track progress of the import:  
 ```

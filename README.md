@@ -169,7 +169,7 @@ password = "$6$HiHi0UmitlOcQRZ9$GWe5Y8HMZmN4657w4nMkMhUpyi3CEcLWZTR.27N6z7RH23yx
 # composer-cli compose metadata IMAGE_UUID  
 ```
 ## Transfer AMI to AWS:  
-### Install Python 3 and the pip tool# yum install python3:  
+### Install Python 3 and the pip tool:  
 ```
 # yum install python3 python3-pip
 ```  

@@ -218,7 +218,7 @@ Wait until import completes before moving to next step
 - Select t2.micro machine type (or image type of your choice), then click "Review & Launch"  
 - Click "Launch"  
 - Select either "Create a key pair" or "Use existing key pair, click the acknowledge box, then select "Launch Instances"  
-- Use your private key via SSH to access the resulting EC2 instance  
+- Use your private key via SSH to access the resulting EC2 instance as ec2-user
 ### Switch to user "student" to verify that your custom user was created in the image build
 ```
 $ su student
